@@ -1,45 +1,42 @@
 import React from 'react'
-import { Link } from 'react-scroll'
+import { useHistory } from 'react-router-dom'
 
 const HeaderComponent = () => {
+  const history = useHistory()
+  const goHomeAndScrollTo = (elementName: string) => {
+    history.push({
+      pathname: '/',
+      state: { elementName }
+    })
+  }
+
   return (
       <div className="header-container">
-          <div className="header-image-container">
+          <div
+              className="header-image-container"
+              onClick={() => goHomeAndScrollTo('home-main')}>
               <div className="header-image-content"></div>
           </div>
           <div className="header-menu">
               <div className="header-menu-item">
-                  <Link
-                      activeClass="active"
-                      to="HomeMain"
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={500}>
+                  <a onClick={() => goHomeAndScrollTo('home-main')}>
                       Home
-                  </Link>
+                  </a>
               </div>
               <div className="header-menu-item">
-                  <Link
-                      activeClass="active"
-                      to="HomeTechno"
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={500}>
+                  <a onClick={() => goHomeAndScrollTo('home-techno')}>
                       Tech Stack
-                  </Link>
+                  </a>
+              </div>
+              <div className="header-menu-item" >
+                  <a onClick={() => goHomeAndScrollTo('home-contact')}>
+                      Contact
+                  </a>
               </div>
               <div className="header-menu-item">
-                  <Link
-                      activeClass="active"
-                      to="HomeContact"
-                      spy={true}
-                      smooth={true}
-                      offset={-70}
-                      duration={500}>
-                      Contact
-                  </Link>
+                  <a href={'/about'}>
+                      About
+                  </a>
               </div>
           </div>
       </div>

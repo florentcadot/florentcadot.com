@@ -7,7 +7,9 @@ import GithubImage from '../../assets/image/github.svg'
 const HomeContactComponent = () => {
   return (
       <div className="home-contact-container">
-          <div className="title">Contact</div>
+          <div className="title-container">
+              <p className="title">Contact</p>
+          </div>
 
           <div className="home-contact-content">
               <div>

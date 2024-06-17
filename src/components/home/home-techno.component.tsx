@@ -33,7 +33,9 @@ const HomeTechnoComponent = () => {
   return (
       <div className="home-techno-container">
 
-          <div className="title">Tech Stack</div>
+          <div className="title-container">
+              <p className="title">Tech Stack </p>
+          </div>
 
           <div className="home-techno-content">
               <div className="home-techno-item-wrapper">

@@ -1,9 +1,8 @@
 import React from 'react'
 import FlorentImage from '../../assets/image/florent.jpg'
 
-const TEXT_PRESENTATION = `
-      I'm Florent. I develop features for your existing web applications and/or 
-      help you to build your POC, MVP, SAAS from scratch.
+const TEXT_PRESENTATION = ` 
+      I can help you to develop your SAAS. With dedication and passion. 
 `
 
 const HomeMainComponent = () => {

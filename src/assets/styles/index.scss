@@ -1,32 +1,36 @@
 $titleSize: 40px;
 $subtitleSize: 35px;
 $tablet: 900px;
-$yellowSand: #fae03d4d;
+$bodyFontColor: white;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  color: $bodyFontColor;
 }
 
 body {
   font-family: "lora";
   font-size: 25px;
-  background-color: #ffff;
+  background-color: black;
 }
 
 a {
   text-decoration: inherit;
-  color: inherit;
   cursor: pointer;
 }
 
+.title-container {
+    padding: 5px 0;
+    font-weight: bold;
+    font-size: $titleSize;
+    display: flex;
+    justify-content: center;
+}
+
 .title {
-  padding: 5px 0;
-  font-weight: bold;
-  font-size: $titleSize;
-  display: flex;
-  justify-content: center;
+  border-bottom: solid 2px;
 }
 
 .subtitle {
@@ -48,6 +52,7 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
   }
 
   .header-image-content {
@@ -59,7 +64,6 @@ a {
 
   .header-menu {
     margin-left: 70px;
-    color: #ffff;
     display: flex;
     flex-basis: 40%;
     justify-content: flex-end;
@@ -81,6 +85,10 @@ a {
   }
 }
 
+.content {
+  min-height: calc(100vh - 270px);
+}
+
 
 .home-main-container {
 
@@ -99,6 +107,9 @@ a {
       padding: 7px;
       height: 300px;
       width: 400px;
+      @media (max-width: $tablet) {
+        display: none;
+      }
     }
 
     .home-main-presentation-container {
@@ -106,7 +117,7 @@ a {
       .home-main-presentation-content {
         margin-left: 80px;
         text-align: left;
-        background-color: #ffff;
+        background-color: black;
         font-weight: 600;
         font-size: 50px;
         padding-bottom: 30px;
@@ -129,13 +140,10 @@ a {
 
 .home-techno-container {
 
-  background-image: url("../image/pyramid5.png");
   @media (max-width: $tablet) {
     background-image: none;
   }
   background-repeat: no-repeat;
-  background-color: $yellowSand;
-  padding-top: 50px;
 
   .home-techno-content {
     padding: 3% 13% 5%;
@@ -151,7 +159,7 @@ a {
       border: solid 5px;
       width: 350px;
       text-align: center;
-      background-color: white;
+      background-color: black;
 
       .home-techno-subItem {
         display: flex;
@@ -171,9 +179,6 @@ a {
 }
 
 .home-contact-container {
-
-  padding-top: 50px;
-
 
   .home-contact-content {
     display: flex;
@@ -197,6 +202,14 @@ a {
 
 }
 
+.about-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3% 13% 8%;
+  text-align: justify;
+}
+
 
 .footer-container {
   width: 100%;
@@ -207,7 +220,6 @@ a {
 
   .footer-menu {
     padding: 20px;
-    color: #ffff;
     display: flex;
     flex-basis: 60%;
     justify-content: center;

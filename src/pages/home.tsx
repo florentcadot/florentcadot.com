@@ -1,19 +1,33 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import HomeMainComponent from 'components/home/home-main.component'
 import HomeTechnoComponent from 'components/home/home-techno.component'
 import HomeContactComponent from 'components/home/home-contact.component'
-import { Element } from 'react-scroll'
+import { Element, scroller } from 'react-scroll'
+import { useLocation } from 'react-router-dom'
 
 const Home = () => {
+  const location = useLocation<{elementName?: string}>()
+  const elementName = location.state.elementName
+  useEffect(() => {
+    if (elementName) {
+      scroller.scrollTo(elementName, {
+        spy: true,
+        smooth: true,
+        offset: -70,
+        duration: 500
+      })
+    }
+  }, [elementName])
+
   return (
       <div>
-          <Element name="HomeMain">
+          <Element name="home-main">
               <HomeMainComponent />
           </Element>
-          <Element name="HomeTechno">
+          <Element name="home-techno">
               <HomeTechnoComponent />
           </Element>
-          <Element name="HomeContact">
+          <Element name="home-contact">
               <HomeContactComponent />
           </Element>
       </div>
