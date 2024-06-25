@@ -1,13 +1,7 @@
-import React from 'react'
-import ReactTooltip from 'react-tooltip'
+import { Tooltip } from 'react-tooltip';
 
 export const TooltipComponent = () => {
   return (
-      <ReactTooltip
-          place="left"
-          type="dark"
-          effect="solid"
-          multiline={true}
-  />
-  )
-}
+    <Tooltip id="florent-tooltip" place="left" data-tooltip-variant="dark" />
+  );
+};

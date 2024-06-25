@@ -1,19 +1,21 @@
-import React from 'react'
-import { Route, Switch } from 'react-router-dom'
-import Home from 'pages/home'
-import About from 'pages/about'
+import { createBrowserRouter } from 'react-router-dom';
+import { Home } from './pages/home';
+import { About } from './pages/about';
+import { MainLayout } from './layouts/main.layout.tsx';
 
-const Routes = () => (
-    <Switch>
-        <Route
-            exact
-            path="/"
-            component={Home} />
-        <Route
-            exact
-            path="/about"
-            component={About} />
-    </Switch>
-)
-
-export default Routes
+export const router = createBrowserRouter([
+  {
+    path: '/',
+    Component: MainLayout,
+    children: [
+      {
+        path: '/',
+        Component: Home,
+      },
+      {
+        path: '/about',
+        Component: About,
+      },
+    ],
+  },
+]);

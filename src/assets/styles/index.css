@@ -1,17 +1,19 @@
-$titleSize: 40px;
-$subtitleSize: 35px;
-$tablet: 900px;
-$bodyFontColor: white;
+:root {
+  --titleSize: 40px;
+  --subtitleSize: 35px;
+  --tablet: 900px;
+  --bodyFontColor: white;
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: $bodyFontColor;
+  color: var(--bodyFontColor);
 }
 
 body {
-  font-family: "lora";
+  font-family: 'lora';
   font-size: 25px;
   background-color: black;
 }
@@ -22,11 +24,11 @@ a {
 }
 
 .title-container {
-    padding: 5px 0;
-    font-weight: bold;
-    font-size: $titleSize;
-    display: flex;
-    justify-content: center;
+  padding: 5px 0;
+  font-weight: bold;
+  font-size: var(--titleSize);
+  display: flex;
+  justify-content: center;
 }
 
 .title {
@@ -36,7 +38,7 @@ a {
 .subtitle {
   padding: 4px 0;
   font-weight: 600;
-  font-size: $subtitleSize;
+  font-size: var(--subtitleSize);
 }
 
 .header-container {
@@ -58,7 +60,7 @@ a {
   .header-image-content {
     height: 130px;
     width: 300px;
-    background: url("../image/logo2.png") no-repeat;
+    background: url('../image/logo2.png') no-repeat;
     background-size: contain;
   }
 
@@ -68,7 +70,7 @@ a {
     flex-basis: 40%;
     justify-content: flex-end;
     align-items: center;
-    @media (max-width: $tablet) {
+    @media (max-width: var(--tablet)) {
       display: none;
     }
   }
@@ -89,16 +91,14 @@ a {
   min-height: calc(100vh - 270px);
 }
 
-
 .home-main-container {
-
   .home-main-content {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 3% 13% 8%;
 
-    @media (max-width: $tablet) {
+    @media (max-width: var(--tablet)) {
       flex-wrap: wrap;
     }
 
@@ -107,13 +107,12 @@ a {
       padding: 7px;
       height: 300px;
       width: 400px;
-      @media (max-width: $tablet) {
+      @media (max-width: var(--tablet)) {
         display: none;
       }
     }
 
     .home-main-presentation-container {
-
       .home-main-presentation-content {
         margin-left: 80px;
         text-align: left;
@@ -139,8 +138,7 @@ a {
 }
 
 .home-techno-container {
-
-  @media (max-width: $tablet) {
+  @media (max-width: var(--tablet)) {
     background-image: none;
   }
   background-repeat: no-repeat;
@@ -175,18 +173,15 @@ a {
       }
     }
   }
-
 }
 
 .home-contact-container {
-
   .home-contact-content {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 3% 13% 5%;
   }
-
 
   .home-contact-item {
     display: flex;
@@ -199,7 +194,6 @@ a {
     height: 30px;
     width: 30px;
   }
-
 }
 
 .about-content {
@@ -209,7 +203,6 @@ a {
   padding: 3% 13% 8%;
   text-align: justify;
 }
-
 
 .footer-container {
   width: 100%;

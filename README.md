@@ -1,33 +1,30 @@
-# React + Typescript + Webpack landing page
+# React + TypeScript + Vite
 
-## About
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-#### General
-A simple landing page developed with React, Typescript and Webpack. **[See website](https://florentcadot.com/)**
+Currently, two official plugins are available:
 
-#### Tech
-- Development: React Typescript Sass with webpack dev server
-- Production on AWS: S3 Bucket + Cloud Front + Route53
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Local development
+## Expanding the ESLint configuration
 
-**Requirements**
+If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
 
-- Node.js version >= 14
-- AWS account + domain name + SSL certificate
+- Configure the top-level `parserOptions` property like this:
 
-**Development**
+```js
+export default {
+  // other rules...
+  parserOptions: {
+    ecmaVersion: 'latest',
+    sourceType: 'module',
+    project: ['./tsconfig.json', './tsconfig.node.json'],
+    tsconfigRootDir: __dirname,
+  },
+}
+```
 
-````
-npm start
-````
-
-**Production**
-
-````
-npm run build
-````
-
-## Resources
-
-https://docs.aws.amazon.com/AmazonS3/latest/userguide/website-hosting-custom-domain-walkthrough.html
+- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
+- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
+- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list

@@ -1,12 +1,10 @@
-import React from 'react'
-import 'assets/styles/index.scss'
-import Routes from 'routes'
-import HeaderComponent from 'components/header/header.component'
-import FooterComponent from 'components/footer/footer.component'
+import { RouterProvider } from 'react-router-dom';
+import { router } from './routes.tsx';
 
-export const App: React.FC = () =>
+export const App = () => {
+  return (
     <div>
-        <HeaderComponent />
-        <Routes />
-        <FooterComponent />
+      <RouterProvider router={router} />
     </div>
+  );
+};
