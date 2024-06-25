@@ -1,7 +1,7 @@
 import FlorentImage from '../../assets/image/florent.jpg';
 
 const TEXT_PRESENTATION = ` 
-      I can help you to develop your SAAS. With dedication and passion. 
+      Hey ! I'm a Full-Stack developer and I can help you develop your SAAS. (with passion and efficiency) 
 `;
 
 export const HomeMainComponent = () => {

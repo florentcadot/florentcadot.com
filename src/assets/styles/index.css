@@ -1,8 +1,8 @@
 :root {
   --titleSize: 40px;
   --subtitleSize: 35px;
-  --tablet: 900px;
   --bodyFontColor: white;
+  --bodyHoverFontColor: #CECCCB;
 }
 
 * {
@@ -21,6 +21,9 @@ body {
 a {
   text-decoration: inherit;
   cursor: pointer;
+  &:hover {
+    color: var(--bodyHoverFontColor);
+  }
 }
 
 .title-container {
@@ -70,7 +73,7 @@ a {
     flex-basis: 40%;
     justify-content: flex-end;
     align-items: center;
-    @media (max-width: var(--tablet)) {
+    @media (max-width: 900px) {
       display: none;
     }
   }
@@ -79,6 +82,10 @@ a {
     padding: 10px;
     font-weight: bold;
     font-size: 20px;
+    cursor: pointer;
+    &:hover {
+      color: var(--bodyHoverFontColor);
+    }
   }
 
   .header-menu-item:hover {
@@ -98,7 +105,7 @@ a {
     align-items: center;
     padding: 3% 13% 8%;
 
-    @media (max-width: var(--tablet)) {
+    @media (max-width: 900px) {
       flex-wrap: wrap;
     }
 
@@ -107,7 +114,7 @@ a {
       padding: 7px;
       height: 300px;
       width: 400px;
-      @media (max-width: var(--tablet)) {
+      @media (max-width: 900px) {
         display: none;
       }
     }
@@ -123,7 +130,6 @@ a {
         border-bottom: solid 2px;
 
         @media (min-width: 500px) and (max-width: 900px) {
-          margin-top: 30px;
           margin-left: 0px;
         }
 
@@ -138,9 +144,9 @@ a {
 }
 
 .home-techno-container {
-  @media (max-width: var(--tablet)) {
-    background-image: none;
-  }
+  /*@media (max-width: 900px) {*/
+  /*  background-image: none;*/
+  /*}*/
   background-repeat: no-repeat;
 
   .home-techno-content {
@@ -202,6 +208,23 @@ a {
   align-items: center;
   padding: 3% 13% 8%;
   text-align: justify;
+  .about-inner-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+
+    .about-block-title{
+    padding-bottom: 5px;
+    }
+
+    .about-link {
+      text-decoration: underline;
+      &:hover {
+        text-decoration: none;
+        color: var(--bodyHoverFontColor);
+      }
+    }
+  }
 }
 
 .footer-container {

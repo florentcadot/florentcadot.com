@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { HomeMainComponent } from '../components/home/home-main.component';
-import { HomeTechnoComponent } from '../components/home/home-techno.component';
-import { HomeContactComponent } from '../components/home/home-contact.component';
+import { HomeTechnoComponent } from '../components/home/home-techno/home-techno.component.tsx';
+import { HomeContactComponent } from '../components/home/home-contact/home-contact.component.tsx';
 import { Element, scroller } from 'react-scroll';
 import { useLocation } from 'react-router-dom';
 
