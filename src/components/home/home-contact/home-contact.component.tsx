@@ -25,8 +25,8 @@ export const HomeContactComponent = () => {
 
       <div className="home-contact-content">
         <div>
-          {contactItemsProps.map((item) => (
-            <ConctactItem {...item} />
+          {contactItemsProps.map((item, i) => (
+            <ConctactItem key={i} {...item} />
           ))}
         </div>
       </div>

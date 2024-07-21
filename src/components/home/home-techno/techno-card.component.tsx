@@ -37,10 +37,10 @@ export const TechnoCardComponent = ({
     <div className="home-techno-item">
       <div className="subtitle">{title}</div>
       <div>
-        {rows.map((row) => (
-          <div className="home-techno-subItem">
-            {row.map((item) => (
-              <>
+        {rows.map((row, i) => (
+          <div key={i} className="home-techno-subItem">
+            {row.map((item, j) => (
+              <div key={`${i}-${j}`}>
                 {item.url ? (
                   <a target="_blank" href={item.url} rel="noreferrer">
                     <TechnoImage
@@ -54,7 +54,7 @@ export const TechnoCardComponent = ({
                     tooltipText={item.tooltipText}
                   />
                 )}
-              </>
+              </div>
             ))}
           </div>
         ))}
