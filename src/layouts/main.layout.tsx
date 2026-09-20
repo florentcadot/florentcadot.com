@@ -4,9 +4,11 @@ import { FooterComponent } from '../components/footer/footer.component.tsx';
 
 export const MainLayout = () => {
   return (
-    <div>
+    <div className="layout">
       <HeaderComponent />
-      <Outlet />
+      <main className="content">
+        <Outlet />
+      </main>
       <FooterComponent />
     </div>
   );

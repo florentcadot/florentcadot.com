@@ -1,21 +1,24 @@
+import { Frame, Window, WindowContent } from 'react95';
 import FlorentImage from '../../assets/image/florent.jpg';
 
 const TEXT_PRESENTATION = ` 
-      Hey ! I'm a Full-Stack developer and I can help you develop your SAAS. (with passion and efficiency) 
+Hi! I’m a Senior Full-Stack Engineer building robust, scalable SaaS products with a pragmatic, quality-first approach.
 `;
 
 export const HomeMainComponent = () => {
   return (
     <div className="home-main-container">
       <div className="home-main-content">
-        <div>
+        <Frame variant="well" className="home-main-photo-frame">
           <img className="home-main-photo" src={FlorentImage} />
-        </div>
-        <div className="home-main-presentation-container">
-          <div className="home-main-presentation-content">
-            {TEXT_PRESENTATION}
-          </div>
-        </div>
+        </Frame>
+        <Window className="home-main-window">
+          <WindowContent>
+            <div className="home-main-presentation-content">
+              {TEXT_PRESENTATION}
+            </div>
+          </WindowContent>
+        </Window>
       </div>
     </div>
   );

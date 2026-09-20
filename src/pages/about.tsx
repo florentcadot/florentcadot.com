@@ -1,3 +1,5 @@
+import { Anchor, Window, WindowContent } from 'react95';
+
 interface AboutLinkProps {
   label: string;
   href: string;
@@ -5,22 +7,24 @@ interface AboutLinkProps {
 
 const AboutLink = ({ label, href }: AboutLinkProps) => {
   return (
-    <a className={'about-link'} target="_blank" href={href}>
+    <Anchor target="_blank" href={href}>
       {label}
-    </a>
+    </Anchor>
   );
 };
 
 export const About = () => {
   return (
-    <div className="content">
-      <div className="about-content">
-        <div className={'about-inner-content'}>
+    <div className="about-content">
+      <Window className="about-window">
+        <WindowContent className={'about-inner-content'}>
           <p>
-            I started my career in IT as a front-end developer in 2018. Then
-            I've started working as a full-stack freelancer in 2020. I'm really
-            passionate about the job, and I'm fond of
-            smart-well-crafted-minimalist-tested-high-quality code.
+            I'm passionate about what I do, and I love writing smart,
+            well-crafted, minimalist, thoroughly tested, and high-quality code.
+            I’m comfortable working with AI tools when they add value, but I’m
+            equally comfortable developing without them when the task calls for
+            it. Ultimately, I care more about the quality of the code and the
+            solution than the tools used to build it.
           </p>
           <div>
             <p className={'about-block-title'}>Tech watch:</p>
@@ -55,33 +59,31 @@ export const About = () => {
                 href={'https://github.com/c2corg/c2c_ui'}
                 label={'Camptocamp frontend'}
               />
-              &nbsp;({`<--`} I've pushed a few commit to those one.)
+              &nbsp;({`<--`} I added a few code commits to those.)
             </li>
             <li>
               <AboutLink
                 href={'https://github.com/OpenBeta/open-tacos'}
-                label={'Openbeta '}
+                label={'Openbeta'}
               />
               &nbsp;(climbing knowledge platform)
             </li>
             <li>
               <AboutLink
-                href={
-                  'https://github.com/electricitymaps/electricitymaps-contrib'
-                }
-                label={'Electricitymaps'}
+                href={'https://github.com/ankitects/anki'}
+                label={'Anki'}
               />
-              &nbsp; (electricity & C02 emission visualization tool)
+              &nbsp;(Spaced repetition flashcard program)
             </li>
           </div>
           <div>
             <p className={'about-block-title'}>Other interests:</p>
             <li>Music production</li>
             <li>Climbing mountains</li>
-            <li>Sustainability</li>
+            <li>Japanese</li>
           </div>
-        </div>
-      </div>
+        </WindowContent>
+      </Window>
     </div>
   );
 };

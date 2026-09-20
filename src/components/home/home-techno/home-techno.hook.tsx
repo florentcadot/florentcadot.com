@@ -38,6 +38,19 @@ import SymfonyImage from '../../../assets/image/symfony.png';
 import PythonImage from '../../../assets/image/python.png';
 import PyramidImage from '../../../assets/image/pyramid.png';
 import FlaskImage from '../../../assets/image/flask.png';
+import ClaudeCodeImage from '../../../assets/image/claude-code.svg';
+import JavaImage from '../../../assets/image/java.svg';
+import SpringBootImage from '../../../assets/image/spring-boot.svg';
+import HibernateImage from '../../../assets/image/hibernate.svg';
+import JunitImage from '../../../assets/image/junit.svg';
+import ElasticsearchImage from '../../../assets/image/elasticsearch.svg';
+import LogstashImage from '../../../assets/image/logstash.svg';
+import ArgoCdImage from '../../../assets/image/argocd.svg';
+import KibanaImage from '../../../assets/image/kibana.svg';
+import KubernetesImage from '../../../assets/image/kubernetes.svg';
+import CodexImage from '../../../assets/image/codex.svg';
+import CursorImage from '../../../assets/image/cursor.svg';
+import JetbrainsAiImage from '../../../assets/image/jetbrains-ai.svg';
 
 export const useHomeTechno = () => {
   const FRONT_END_ROWS = [
@@ -131,6 +144,18 @@ export const useHomeTechno = () => {
         tooltipText: 'Flask',
       },
     ],
+    [
+      {
+        url: 'https://www.java.com/',
+        image: JavaImage,
+        tooltipText: 'Java',
+      },
+      {
+        url: 'https://spring.io/projects/spring-boot',
+        image: SpringBootImage,
+        tooltipText: 'Spring Boot',
+      },
+    ],
   ];
 
   const DATABASE_ROWS = [
@@ -184,6 +209,13 @@ export const useHomeTechno = () => {
         tooltipText: 'SQL Alchemy',
       },
     ],
+    [
+      {
+        url: 'https://hibernate.org/',
+        image: HibernateImage,
+        tooltipText: 'Hibernate',
+      },
+    ],
   ];
   const TESTING_ROWS = [
     [
@@ -225,6 +257,11 @@ export const useHomeTechno = () => {
         url: 'https://playwright.dev/',
         image: PlaywrightImage,
         tooltipText: 'Playwright',
+      },
+      {
+        url: 'https://junit.org/junit5/',
+        image: JunitImage,
+        tooltipText: 'JUnit',
       },
     ],
   ];
@@ -275,6 +312,62 @@ export const useHomeTechno = () => {
         tooltipText: 'Amazon Web Services',
       },
     ],
+    [
+      {
+        url: 'https://kubernetes.io/',
+        image: KubernetesImage,
+        tooltipText: 'Kubernetes',
+      },
+      {
+        url: 'https://argo-cd.readthedocs.io/',
+        image: ArgoCdImage,
+        tooltipText: 'Argo CD',
+      },
+    ],
+    [
+      {
+        url: 'https://www.elastic.co/elasticsearch',
+        image: ElasticsearchImage,
+        tooltipText: 'ELK - Elasticsearch',
+      },
+      {
+        url: 'https://www.elastic.co/logstash',
+        image: LogstashImage,
+        tooltipText: 'ELK - Logstash',
+      },
+      {
+        url: 'https://www.elastic.co/kibana',
+        image: KibanaImage,
+        tooltipText: 'ELK - Kibana',
+      },
+    ],
+  ];
+
+  const AI_ROWS = [
+    [
+      {
+        url: 'https://www.anthropic.com/claude-code',
+        image: ClaudeCodeImage,
+        tooltipText: 'Claude Code',
+      },
+      {
+        url: 'https://openai.com/codex/',
+        image: CodexImage,
+        tooltipText: 'Codex',
+      },
+    ],
+    [
+      {
+        url: 'https://cursor.com',
+        image: CursorImage,
+        tooltipText: 'Cursor',
+      },
+      {
+        url: 'https://www.jetbrains.com/ai/',
+        image: JetbrainsAiImage,
+        tooltipText: 'JetBrains AI',
+      },
+    ],
   ];
 
   return {
@@ -283,5 +376,6 @@ export const useHomeTechno = () => {
     databaseRows: DATABASE_ROWS,
     testingRows: TESTING_ROWS,
     workflowRows: WORKFLOW_ROWS,
+    aiRows: AI_ROWS,
   };
 };

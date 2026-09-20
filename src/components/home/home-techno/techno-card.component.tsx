@@ -1,4 +1,5 @@
 import React from 'react';
+import { GroupBox, Tooltip } from 'react95';
 
 interface TechnoItem {
   url?: string;
@@ -18,13 +19,13 @@ interface TechnoImageProps {
 }
 
 const TechnoImage = (props: TechnoImageProps) => {
-  return (
-    <img
-      data-tooltip-id="florent-tooltip"
-      data-tooltip-content={props.tooltipText}
-      className="techno-image"
-      src={props.image}
-    />
+  const image = <img className="techno-image" src={props.image} />;
+  return props.tooltipText ? (
+    <Tooltip text={props.tooltipText} position="top" enterDelay={100}>
+      {image}
+    </Tooltip>
+  ) : (
+    image
   );
 };
 
@@ -34,8 +35,7 @@ export const TechnoCardComponent = ({
   endingElement,
 }: TechnoCardComponentProps) => {
   return (
-    <div className="home-techno-item">
-      <div className="subtitle">{title}</div>
+    <GroupBox label={title} className="home-techno-item">
       <div>
         {rows.map((row, i) => (
           <div key={i} className="home-techno-subItem">
@@ -60,6 +60,6 @@ export const TechnoCardComponent = ({
         ))}
         {endingElement}
       </div>
-    </div>
+    </GroupBox>
   );
 };
