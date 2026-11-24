@@ -7,8 +7,7 @@ A simple landing page developed with React, Typescript, Prettier and Vite. **[Se
 
 #### Tech
 - Development: React Typescript with vite
-- Production on AWS: S3 Bucket + Cloud Front + Route53
-
+- 
 ## Local development
 
 **Requirements**
